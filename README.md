@@ -59,13 +59,13 @@ If your SSH user on the Raspberry Pis are not the Raspbian default `pi` user mod
 ## Confirm Ansible is working with your Raspberry Pis:
 
 ```
-ansible -m ping all
+ansible -i inventory -m ping all
 ```
 This may fail to ping if you have not setup SSH keys and only configured your Pi's with passwords
 ## Deploy, Deploy, Deploy
 
 ```
-ansible-playbook cluster.yml
+ansible-playbook -i inventory cluster.yml
 ```
 
 # Interact with Kubernetes
