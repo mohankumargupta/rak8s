@@ -1,13 +1,16 @@
 - hosts: all
+  become: yes
   roles:
     - common
     - kubeadm
 
 - hosts: master
+  become: yes
   roles:
     - master
     - dashboard
 
 - hosts: all:!master
+  become: yes
   roles:
     - workers
