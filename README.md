@@ -47,7 +47,7 @@ Also, it's cheaper than a year of GKE. Plus, why not run Kubernetes in your home
 ## Download the latest release or clone the repo:
 
 ```
-git clone https://github.com/rak8s/rak8s.git
+git clone https://github.com/mohankumargupta/rak8s
 ```
 
 ## Modify ansible.cfg and inventory
