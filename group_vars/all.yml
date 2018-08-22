@@ -1,28 +1,6 @@
 token: udy29x.ugyyk3tumg27atmr
 podnet: 192.168.81.0/24
 
-kubernetes_package_version: "1.9.7-00"
-# Available versions:
-# 1.10.3-00
-# 1.10.2-00
-# 1.10.1-00
-# 1.10.0-00
-# 1.9.8-00
-# 1.9.7-00
-# 1.9.6-00
-# 1.9.5-00
-
-kubernetes_version: "v1.9.7"
-# Available versions:
-# v1.10.3
-# v1.10.2
-# v1.10.1
-# v1.10.1
-# v1.9.8
-# v1.9.7
-# v1.9.6
-# v1.9.5
-
 flannel_version: "v0.10.0"
 # v0.10.0
 # v0.9.1
