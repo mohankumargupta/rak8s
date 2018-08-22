@@ -12,10 +12,14 @@
   register: docker_there
   ignore_errors: True
 
-# https://docs.docker.com/engine/installation/linux/docker-ce/debian/#install-using-the-convenience-script
-- name: Run Docker {{ docker_ce_version }} Install Script
-  script: "files/get-docker.sh {{ docker_ce_version }}"
+- name: Install docker
+  shell: "curl -sSL get.docker.com | sh" 
   when: docker_there.stat.exists == False
+  
+- Add group docker to user pi
+  user:
+    name: pi
+    groups: docker
 
 - name: Pass bridged IPv4 traffic to iptables' chains
   sysctl:
