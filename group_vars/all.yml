@@ -1,5 +1,5 @@
 token: udy29x.ugyyk3tumg27atmr
-podnet: 10.244.0.0/16
+podnet: 192.168.81.0/24
 
 kubernetes_package_version: "1.9.7-00"
 # Available versions:
@@ -22,15 +22,6 @@ kubernetes_version: "v1.9.7"
 # v1.9.7
 # v1.9.6
 # v1.9.5
-
-docker_ce_version: "18.04.0~ce~3-0~raspbian"
-# Available versions:
-# 18.05.0~ce~3-0~raspbian
-# 18.04.0~ce~3-0~raspbian
-# 18.03.1~ce-0~raspbian
-# 18.03.0~ce-0~raspbian
-# 18.02.0~ce-0~raspbian
-# 18.01.0~ce-0~raspbian
 
 flannel_version: "v0.10.0"
 # v0.10.0
