@@ -50,9 +50,9 @@
     autoclean: yes
     autoremove: yes
 
-- name: Install k8s {{ kubernetes_package_version }} Y'all
+- name: Install k8s (kubernetes)
   apt:
-    name: "{{ item }}={{ kubernetes_package_version }}"
+    name: "{{ item }}"
     state: present
     force: yes
   with_items:
