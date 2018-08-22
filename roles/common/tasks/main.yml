@@ -31,10 +31,6 @@
     autoremove=yes
     cache_valid_time=86400
 
-- name: apt-get upgrade
-  apt:
-    upgrade=full
-
 - name: Reboot
   shell: sleep 2 && shutdown -r now "Ansible Reboot for /boot/cmdline.txt Change"
   async: 1
