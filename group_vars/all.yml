@@ -1,10 +1,1 @@
 token: udy29x.ugyyk3tumg27atmr
-podnet: 192.168.81.0/24
-
-flannel_version: "v0.10.0"
-# v0.10.0
-# v0.9.1
-# v0.9.0
-# v0.8.0
-# v0.7.1
-# v0.7.0
