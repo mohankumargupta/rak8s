@@ -33,8 +33,8 @@
   when: kubeadm_reset is succeeded
   register: kubeadm_join
 
-- name: Install Flannel (Networking)
-  shell: "curl -sSL https://rawgit.com/coreos/flannel/master/Documentation/kube-flannel.yml | sed 's/amd64/arm/g' | kubectl create -f -" 
+- name: Install Weave (Networking)
+  shell: "kubectl apply -f https://git.io/weave-kube" 
 
 - name: Poke kubelet
   systemd:
