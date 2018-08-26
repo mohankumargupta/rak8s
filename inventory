@@ -1,4 +1,4 @@
-kmaster    ansible_host=192.168.81.18 ansible_user=pi
+kmaster    ansible_host=192.168.81.16 ansible_user=pi
 kslave     ansible_host=192.168.81.86 ansible_user=pi
 
 [master]

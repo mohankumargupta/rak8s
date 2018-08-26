@@ -16,7 +16,7 @@
   shell: "curl -sSL get.docker.com | sh" 
   when: docker_there.stat.exists == False
   
-- Add group docker to user pi
+- name: Add group docker to user pi
   user:
     name: pi
     groups: docker
