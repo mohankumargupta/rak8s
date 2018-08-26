@@ -41,15 +41,4 @@
     - boot
     - shutdown
 
-- name: Wait for Reboot
-  local_action: wait_for
-  args:
-    host: "{{ inventory_hostname }}"
-    port: 22
-    delay: 100
-    timeout: 200
-  become: False
-  when: cmdline or hostname is changed
-  tags:
-    - boot
-    - shutdown
+
