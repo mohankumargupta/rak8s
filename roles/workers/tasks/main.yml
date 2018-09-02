@@ -4,10 +4,17 @@
   shell: "yes | kubeadm reset"
   register: kubeadm_reset
 
+- name: IP address of master
+  set_fact:
+    master_IPaddress: "{{ hostvars[groups['master'][0]]['ansible_host'] }}"
+
+- name: print IP address of master
+  debug:
+    msg: "{{ master_IPaddress }}"
+
 - name: Join Kubernetes Cluster
-  shell: kubeadm join --ignore-preflight-errors=all --token {{ token }} {{ groups['master'][0] }}:6443 --discovery-token-unsafe-skip-ca-verification
+  shell: "kubeadm join --ignore-preflight-errors=all --token {{ token }} --discovery-token-unsafe-skip-ca-verification {{ master_IPaddress }}:6443"
   when: kubeadm_reset is succeeded
-  register: kubeadm_join
 
 - name: Poke kubelet
   systemd:
@@ -16,3 +23,4 @@
     daemon_reload: yes
     enabled: yes
   register: kubelet_poke
+
